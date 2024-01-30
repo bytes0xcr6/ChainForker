@@ -1,0 +1,14 @@
+{
+  "name": "chain-forker",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^3.0.0",
+    "hardhat": "^2.19.4"
+  },
+  "scripts": {
+    "start": "npx hardhat node"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.1",
+    "hardhat-deal": "^3.0.2"
+  }
+}
