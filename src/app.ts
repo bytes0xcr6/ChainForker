@@ -4,18 +4,13 @@ import { exec } from "child_process";
 
 export const app = Fastify();
 
-// Import the Hardhat runtime
-import { HardhatRuntimeEnvironment } from "hardhat/types/runtime";
-import { task } from "hardhat/config";
-
 app.register(require("fastify-healthcheck"));
-// Register CORS with allowed origin(s)
 app.register(fastifyCors, {
   origin: "*",
 });
 
 const serverAddress: string = "0.0.0.0";
-const port: number = 8545;
+const port: number = 8080;
 
 app.listen({ port, host: serverAddress }, async () => {
   console.log(`Listening on port ${port}`);
